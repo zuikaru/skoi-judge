@@ -1,0 +1,51 @@
+group 'com.talesdev'
+version '1.0'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.ratpack:ratpack-gradle:1.4.2"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'java-library-distribution'
+apply plugin: "io.ratpack.ratpack-java"
+apply plugin: "idea"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile "org.slf4j:slf4j-simple:1.7.21"
+    compile "com.google.code.gson:gson:2.8.0"
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile "org.apache.commons:commons-lang3:3.5"
+    compile 'com.rabbitmq:amqp-client:4.1.0'
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
+
+}
+mainClassName = "com.talesdev.judge.Main"
+
+jar {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+}
+
+uploadArchives {
+    repositories {
+        flatDir {
+            dirs 'repos'
+        }
+    }
+}

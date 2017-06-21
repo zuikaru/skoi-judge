@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skoi-judge.iml" filepath="$PROJECT_DIR$/.idea/modules/skoi-judge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skoi-judge_main.iml" filepath="$PROJECT_DIR$/.idea/modules/skoi-judge_main.iml" group="skoi-judge" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skoi-judge_test.iml" filepath="$PROJECT_DIR$/.idea/modules/skoi-judge_test.iml" group="skoi-judge" />
+    </modules>
+  </component>
+</project>
